@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>databoys - Estatísticas Educacionais</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <header>
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+        <div id="menu" class="menu">
+            <button class="close-btn" onclick="closeMenu()">X</button>
+            <a href="index.html">Início</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="quemSomos.html">Quem Somos?</a>
+        </div>
+
+        <h2>Estatísticas Educacionais</h2>
+        <form class="lateral-form" id="estadoform">
+            <select id="estado" name="estado" class="estado-dropdown">
+                <option value="">Selecione uma Opção</option>
+                <option value="nordeste">Nordeste</option>
+                <option value="alagoas">Alagoas</option>
+                <option value="bahia">Bahia</option>
+                <option value="ceara">Ceará</option>
+                <option value="maranhao">Maranhão</option>
+                <option value="paraiba">Paraíba</option>
+                <option value="pernambuco">Pernambuco</option>
+                <option value="piaui">Piauí</option>
+                <option value="sergipe">Sergipe</option>
+                <option value="riograndedonorte">Rio Grande do Norte</option>
+            </select>
+            <button id="buscar" type="button" onclick="buscarGraficos()">Buscar</button>
+        </form>
+
+        <img class="logo" src="MicrosoftTeams-image-transformed.svg" height="160" width="160" alt="logo databoys">
+    </header>
+
+    <div id="content">
+        <!-- Adicione este código ao seu arquivo HTML -->
+
+<div class="charts-estado" id="charts-nordeste">
+    <h2>Dados Geral da Educação no Nordeste</h2>
+
+    <!-- Gráficos grandes à esquerda -->
+    <div class="large-charts">
+        <div class="chart-container">
+            <h3>Número Geral de Escolas no Nordeste</h3>
+            <canvas id="escolas-nordeste"></canvas>
+        </div>
+        <div class="chart-container">
+            <h3>Investimento nas Escolas do Nordeste</h3>
+            <canvas id="investimentos-nordeste"></canvas>
+        </div>
+    </div>
+
+    <!-- Gráficos pequenos à direita -->
+    <div class="small-charts">
+        <div class="chart-container">
+            <h3>Quantidade Geral de Alunos no Nordeste</h3>
+            <canvas id="alunos-nordeste"></canvas>
+        </div>
+        <div class="chart-container">
+            <h3>Quantidade de Computadores Nas Escolas do Nordeste</h3>
+            <canvas id="computadores-nordeste"></canvas>
+        </div>
+        <div class="chart-container">
+            <h3>Quantidade tablets nas Escolas do Nordeste</h3>
+            <canvas id="tablets-nordeste"></canvas>
+        </div>
+        <div class="chart-container">
+            <h3>Quantidade Projetores nas Escolas do Nordeste</h3>
+            <canvas id="projetores-nordeste"></canvas>
+        </div>
+        <div class="chart-container">
+            <h3>Quantidade Laboratórios nas Escolas do Nordeste</h3>
+            <canvas id="laboratorios-nordeste"></canvas>
+        </div>
+        <div class="chart-container">
+            <h3>Orçamento das Escolas do Nordeste</h3>
+            <canvas id="orcamentos-nordeste"></canvas>
+        </div>
+    </div>
+</div>
+
+            
+            
+        </div>    
+            <!-- Alagoas--> 
+        <div class="charts-estado" id="charts-alagoas">
+            <canvas id="escolas-alagoas"></canvas>
+            <canvas id="alunos-alagoas"></canvas>
+            <canvas id="computadores-alagoas"></canvas>
+            <canvas id="tablets-alagoas"></canvas>
+            <canvas id="projetores-alagoas"></canvas>
+            <canvas id="laboratorios-alagoas"></canvas>
+            <canvas id="orcamento-alagoas"></canvas>
+            <canvas id="investimentos-alagoas"></canvas>
+        </div>
+        <!-- Bahia -->
+        <div class="charts-estado" id="charts-bahia">
+            <canvas id="escolas-bahia"></canvas>
+            <canvas id="alunos-bahia"></canvas>
+            <canvas id="computadores-bahia"></canvas>
+            <canvas id="tablets-bahia"></canvas>
+            <canvas id="projetores-bahia"></canvas>
+            <canvas id="laboratorios-bahia"></canvas>
+            <canvas id="orcamento-bahia"></canvas>
+            <canvas id="investimentos-bahia"></canvas>
+        </div>
+
+        <!-- Ceará -->
+        <div class="charts-estado" id="charts-ceara">
+            <canvas id="escolas-ceara"></canvas>
+            <canvas id="alunos-ceara"></canvas>
+            <canvas id="computadores-ceara"></canvas>
+            <canvas id="tablets-ceara"></canvas>
+            <canvas id="projetores-ceara"></canvas>
+            <canvas id="laboratorios-ceara"></canvas>
+            <canvas id="orcamento-ceara"></canvas>
+            <canvas id="investimentos-ceara"></canvas>
+        </div>
+
+
+
+        <!-- Maranhão -->
+        <div class="charts-estado" id="charts-maranhao">
+            <canvas id="escolas-maranhao"></canvas>
+            <canvas id="alunos-maranhao"></canvas>
+            <canvas id="computadores-maranhao"></canvas>
+            <canvas id="tablets-maranhao"></canvas>
+            <canvas id="projetores-maranhao"></canvas>
+            <canvas id="laboratorios-maranhao"></canvas>
+            <canvas id="orcamento-maranhao"></canvas>
+            <canvas id="investimentos-maranhao"></canvas>
+        </div>
+
+
+        <!-- Paraíba -->
+        <div class="charts-estado" id="charts-paraiba">
+            <canvas id="escolas-paraiba"></canvas>
+            <canvas id="alunos-paraiba"></canvas>
+            <canvas id="computadores-paraiba"></canvas>
+            <canvas id="tablets-paraiba"></canvas>
+            <canvas id="projetores-paraiba"></canvas>
+            <canvas id="laboratorios-paraiba"></canvas>
+            <canvas id="orcamento-paraiba"></canvas>
+            <canvas id="investimentos-paraiba"></canvas>
+        </div>
+
+
+        <!-- Pernambuco -->
+        <div class="charts-estado" id="charts-pernambuco">
+            <canvas id="escolas-pernambuco"></canvas>
+            <canvas id="alunos-pernambuco"></canvas>
+            <canvas id="computadores-pernambuco"></canvas>
+            <canvas id="tablets-pernambuco"></canvas>
+            <canvas id="projetores-pernambuco"></canvas>
+            <canvas id="laboratorios-pernambuco"></canvas>
+            <canvas id="orcamento-pernambuco"></canvas>
+            <canvas id="investimentos-pernambuco"></canvas>
+        </div>
+        <!-- Piauí -->
+        <div class="charts-estado" id="charts-piaui">
+            <canvas id="escolas-piaui"></canvas>
+            <canvas id="alunos-piaui"></canvas>
+            <canvas id="computadores-piaui"></canvas>
+            <canvas id="tablets-piaui"></canvas>
+            <canvas id="projetores-piaui"></canvas>
+            <canvas id="laboratorios-piaui"></canvas>
+            <canvas id="orcamento-piaui"></canvas>
+            <canvas id="investimentos-piaui"></canvas>
+        </div>
+        <!-- Sergipe -->
+        <div class="charts-estado" id="charts-sergipe">
+            <canvas id="escolas-sergipe"></canvas>
+            <canvas id="alunos-sergipe"></canvas>
+            <canvas id="computadores-sergipe"></canvas>
+            <canvas id="tablets-sergipe"></canvas>
+            <canvas id="projetores-sergipe"></canvas>
+            <canvas id="laboratorios-sergipe"></canvas>
+            <canvas id="orcamento-sergipe"></canvas>
+            <canvas id="investimentos-sergipe"></canvas>
+        </div>
+
+        <!-- Rio Grande do Norte -->
+        <div class="charts-estado" id="charts-riograndedonorte">
+            <canvas id="escolas-rio-grande-do-norte"></canvas>
+            <canvas id="alunos-rio-grande-do-norte"></canvas>
+            <canvas id="computadores-rio-grande-do-norte"></canvas>
+            <canvas id="tablets-rio-grande-do-norte"></canvas>
+            <canvas id="projetores-rio-grande-do-norte"></canvas>
+            <canvas id="laboratorios-rio-grande-do-norte"></canvas>
+            <canvas id="orcamento-rio-grande-do-norte"></canvas>
+            <canvas id="investimentos-rio-grande-do-norte"></canvas>
+        </div>
+    </div>
+    
+    <footer>
+        &copy; Databoys Estatísticas Educacionais - 2023. Todos os direitos reservados
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
