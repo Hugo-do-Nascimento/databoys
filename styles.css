@@ -87,6 +87,17 @@ section {
     padding: 20px;
     display: flex;   
     flex-direction: column;
+    
+}
+
+.charts-estado {
+    flex: 1;
+    width: 50%;
+    background-color: #f0f0f0;
+    padding: 20px;
+    display: flex;   
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Estilização do article(lado esquerdo) */
@@ -183,6 +194,7 @@ aside a.selected {
             height: 400px;
             /*max-width: 100px;  Defina a largura máxima desejada */
             margin: 0 auto;   /* Centraliza o gráfico na tela */
+            align-items: center;
         }
 .estado-dropdown {
     width: 150px; /* Ajuste conforme necessário */
@@ -222,23 +234,12 @@ aside a.selected {
     flex-wrap: wrap;
 }
 
-.charts-estado {
+/*.charts-estado {
     box-sizing: border-box;
     width: 50%;
     padding: 10px;
-}
+}*/
 
-.large-charts {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.small-charts {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-}
 
 .chart-container {
     margin-bottom: 20px;
@@ -264,14 +265,31 @@ canvas {
     background-color: #f8f8f8;
 }
 
+
+
+
+
+/* Estilização da imagem arredondada */
+
+
+
+/* Estilização dos membros */
 #equipe {
     display: flex;
+    justify-content: space-around; /* Ou use 'space-between' se quiser mais espaçamento entre os membros */
     flex-wrap: wrap;
-    justify-content: space-around;
 }
 
 .membro {
     width: 250px;
     margin: 10px;
     text-align: center;
+}
+
+/* Estilização da imagem arredondada */
+.foto-arredondada {
+    border-radius: 50%;
+    width: 100px; /* Ajuste conforme necessário */
+    height: 100px; /* Ajuste conforme necessário */
+    object-fit: cover;
 }
