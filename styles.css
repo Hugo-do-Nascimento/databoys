@@ -92,7 +92,7 @@ section {
 
 .charts-estado {
     flex: 1;
-    width: 50%;
+    width: 100%;
     background-color: #f0f0f0;
     padding: 20px;
     display: flex;   
