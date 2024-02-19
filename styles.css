@@ -86,7 +86,6 @@ section {
     padding: 80px;
     display: flex;  
     flex-direction: column;
-    text-align: center;
 }
  
 .charts-estado {
